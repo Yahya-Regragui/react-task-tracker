@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 import Header from "./components/Header"
-import Task from "./components/Task"
+import Tasks from "./components/Tasks"
 
 function App() {
 
@@ -40,10 +40,14 @@ function App() {
     
 ])
 
+  const deleteTask =(id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+
   return (
     <div className="container">
       <Header  title={"Task Title "}/>
-      <Task tasks={tasks}/>
+      <Tasks tasks={tasks} onDelete={deleteTask}/>
     </div>
   );
 }

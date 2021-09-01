@@ -26,3 +26,19 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.task {
+  background-color: rgb(235, 235, 235);
+  border-radius: 3px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
+}
+.task h3 {
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+}
